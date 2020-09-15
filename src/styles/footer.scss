@@ -1,0 +1,87 @@
+footer{
+  background-color: $main-background2;
+  color: $main-text;
+  padding: 33px 0;
+
+  .company-address-list{
+    list-style: none;
+    #{$a-tags} {
+      color: $main-text;
+      text-decoration: none;
+    }
+    #{$a-tags-hover} {
+      color: $main-text;
+    }
+    .nav-link{
+      padding: 0 0 3px 0;
+    }
+    .email{
+      padding: 30px 0 0 0;
+      text-decoration: underline;
+    }
+  }
+
+  .navbar, .navbar-nav, .nav-item {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    #{$a-tags} {
+      color: $main-text;
+      text-decoration: none;
+    }
+    #{$a-tags-hover} {
+      color: $main-text;
+    }
+    .nav-link{
+      padding: 0 0 15px 0;
+    }
+  }
+
+  .color-text-navbar {
+    color: $main-text!important;
+    font-size: 14px;
+  }
+
+
+  *:focus {
+    outline: none !important;
+  }
+
+  a {
+    &:focus, &:hover {
+      text-decoration: none;
+      background-color: inherit !important;
+    }
+  }
+
+  .footer-icon{
+    padding: 10px
+  }
+
+}
+
+@media (max-width: 992px) {
+  footer {
+    .logo-footer{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+    .rwd-center {
+      justify-content: center !important;
+      display: flex;
+      .navbar, .navbar-nav, .nav-item {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        .nav-link{
+          padding: 0;
+        }
+      }
+
+    }
+  }
+}
+
+
+

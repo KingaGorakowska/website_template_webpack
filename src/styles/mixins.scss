@@ -1,0 +1,107 @@
+// alignment and positioning
+@mixin center-text{
+    text-align: center;
+}
+@mixin v-align{
+    vertical-align: middle;
+}
+@mixin inline-block{
+    display: inline-block
+}
+@mixin inline{
+    display: inline;
+}
+@mixin block{
+    display: block;
+}
+@mixin relative{
+    position: relative;
+}
+@mixin absolute{
+    position: absolute;
+}
+@mixin absolute-0000{
+    @include absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+}
+@mixin v-align-transform{
+    @include relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin h-align-transform{
+    @include relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+// list
+@mixin list-style-none{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+// transition 
+@mixin basic-transition{
+    transition: all 0.3s ease-in-out;
+}
+
+// colors
+@mixin colors($bg-color, $color){
+    background-color: $bg-color;
+    color: $color;
+}
+
+// text
+@mixin basic-text($size, $l-height){
+    font-size: $size;
+    line-height: $l-height;
+}
+@mixin upper{
+    text-transform: uppercase;
+}
+
+// padding and margin
+@mixin padding-margin($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+// size
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+// cursor
+@mixin pointer{
+    cursor: pointer;
+}
+
+// basic shadow
+@mixin shadow-hover{
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.3);
+}
+
+// dark overlay
+@mixin dark-overlay{
+    content:"";
+    z-index: 0;
+    background: none repeat rgba(30,30,30,0.5);
+    @include absolute;
+    top:0;
+    left:0;
+    @include size(100%,100%);
+}
+
+// hide elements
+@mixin opacity1{
+    opacity: 1;
+}
+@mixin opacity0{
+    opacity: 0;
+}

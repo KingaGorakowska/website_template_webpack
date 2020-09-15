@@ -1,0 +1,97 @@
+#top-head {
+  background-image: url("../../public/img/header-img.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  .navbar.scrolled {
+    background-color: #231f20!important;
+    transition: all 0.2s ease;
+    height:70px;
+  }
+
+  .navbar{
+    background-color: transparent;
+    box-shadow: 0 20px 20px -20px rgba(0,0,0,.2);
+    
+    .navbar-brand{
+      padding-left:0;
+    }
+    .navbar-nav, .nav-item {
+      margin: 10px 0 10px 30px;
+      display: flex;
+      justify-content: space-around;
+      color: $main-text;
+      border-bottom: 1px solid transparent;
+      @include basic-transition;
+      #{$a-tags} {
+        color: $main-text;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+      #{$a-tags-hover} {
+        color: $main-text;
+        border-bottom: 1px solid $text-lightest;
+      }
+
+      .search-icon{
+        padding-right: 0;
+      }
+      .scrolled-text-color{
+        color: $main-text;
+        border-bottom: 1px solid transparent;
+        @include basic-transition;
+        #{$a-tags} {
+          color: $main-text;
+          text-decoration: none;
+        }
+        #{$a-tags-hover} {
+          color: $main-text;
+        }
+        &.active{
+          border-bottom: 1px solid $text-lightest;
+        }
+      }
+    }
+  }
+  .module-wrapper{
+    margin: 0 86px;
+    color: $main-text;
+    .module-title{
+      margin: 10px 0;
+      font-size: 4rem;
+    }
+    .module-description .text-description{
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 300;
+      color: $text-lightest;
+    }
+    .btn-white{
+      border: 3px solid $text-lightest;
+      color: $text-lightest;
+      text-decoration: none;
+      outline: none;
+      @include basic-transition;
+      padding: 10px 35px;
+      margin-top: 30px;
+      font-size: 16px;
+      &:hover {
+        background-color: $background-white!important;
+        color: $text-dark;
+        border: 3px solid transparent;
+      }
+      
+    }
+  }
+
+  *:focus {
+    outline: none !important;
+  }
+
+  a {
+    &:focus, &:hover {
+      text-decoration: none;
+      background-color: inherit !important;
+    }
+  }
+}

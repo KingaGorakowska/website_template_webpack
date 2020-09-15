@@ -1,0 +1,238 @@
+//fonts section
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+
+.roboto-font {
+  font-family: 'Roboto', sans-serif;
+
+  &.light {
+    font-weight: 300;
+  }
+  &.regular {
+    font-weight: 400;
+  }
+  &.medium {
+    font-weight: 500;
+  }
+  &.semi-bold {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.extra-bold {
+    font-weight: 800;
+  }
+  &.black {
+    font-weight: 900;
+  }
+}
+
+$main-font: 'Roboto', sans-serif;
+
+body {
+    font-family: $main-font !important;
+}
+
+html {
+    font-size: 10px;
+}
+  
+// headlines
+h1, h2, h3, h4, h5, h6{
+  font-family: $main-font;
+  color: $text-dark;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h1{
+  font-size:3.2rem;
+  color: $text-lightest;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+h3{
+  font-size: 2.10rem;
+  color: $text-lightest;
+}
+
+h4, h5, h6{
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+// main text
+
+p {
+  color: $text-paragraph;
+  @include basic-text(1.80rem, 2.8rem);
+  @include padding-margin(0,0);
+  padding-bottom: 20px;
+}
+
+p .text-uppercase{
+  font-size: 2.10rem;
+}
+.color-text-navbar{
+  font-size: 1.6rem;
+}
+nav li a {
+  font-size: 14px;
+}
+.footer{
+  font-size: 1.5rem;
+  
+}
+#top-head p{
+  font-size: 14px;
+}
+.brand-name{
+  font-size: 35px;
+}
+
+@media (max-width: $large){
+  html {
+    font-size: 11px;
+  }
+  
+  h1{
+    font-size:3.10rem;
+  }
+
+  h2{
+    font-size: 2.90rem !important;
+  }
+
+  h3{
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 1.70rem;
+  }
+
+  p .text-uppercase{
+    font-size: 2rem;
+  }
+
+  .color-text-navbar{
+    font-size: 1.50rem;
+  }
+
+  nav li a {
+    font-size: 19px;
+  }
+
+  .footer{
+    font-size: .9rem;
+  }
+
+  #top-head p{
+    font-size: 13px;
+  }
+
+  .brand-name{
+    font-size: 28px;
+  }
+
+}
+
+@media (max-width: $medium){
+  html {
+    font-size: 10px;
+  }
+
+  h1{
+    font-size:3rem;
+  }
+
+  h2{
+    font-size: 2.80rem !important;
+  }
+
+  h3{
+    font-size: 1.90rem !important;
+  }
+
+  p {
+    font-size: 1.60rem;
+  }
+
+  p .text-uppercase{
+    font-size: 1.90rem;
+  }
+
+  .color-text-navbar{
+    font-size: 1.40rem;
+  }
+
+  nav li a {
+    font-size: 18px;
+  }
+
+  .footer{
+    font-size: .9rem;
+  }
+
+  #top-head p{
+    font-size: 12px;
+  }
+
+  .brand-name{
+    font-size: 25px;
+  }
+}
+
+@media (max-width: $small) {
+
+  html {
+    font-size: 8px;
+  }
+
+  h1{
+    font-size:2.90rem;
+  }
+
+  h2{
+    font-size: 2.70rem !important;
+  }
+
+  h3{
+    font-size: 1.80rem !important;
+  }
+
+  p {
+    font-size: 1.50rem;
+  }
+
+  p .text-uppercase{
+    font-size: 1.80rem;
+  }
+  .color-text-navbar{
+    font-size: 1.30rem;
+  }
+
+  nav li a {
+    font-size: 17px;
+  }
+
+  .footer{
+    font-size: .9rem;
+  }
+  .contact-footer{
+    font-size:11px;
+  }
+
+  #top-head p{
+    font-size: 11px;
+  }
+
+  .brand-name{
+    font-size: 18px;
+  }
+
+}
