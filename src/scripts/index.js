@@ -78,7 +78,7 @@ import '../styles/index.scss';
                                 href = href.substr(1);
                             }
                             if (href === visibleElement) {
-                                $($t).parent().addClass(options.active_class)
+                                $($t).parent().addClass(options.active_class);
                             }
                         });
                     }
@@ -135,7 +135,7 @@ import '../styles/index.scss';
         let navbarActive = $('#top-head .navbar');
         $(".hamburger").click(function() { 
             navbarActive.addClass('navbar-mobile');
-        }); 
+        });  
 
         // animation nav 
 
@@ -156,7 +156,6 @@ import '../styles/index.scss';
           let scrollElement = $('.nav-link, .navbar-brand');
           scrollElement.scrollToElement(80);
         
-        
           $(window).on('scroll', function () {
             let scroll_top = $(window).scrollTop();
             let navbar = $('.navbar');
@@ -164,14 +163,27 @@ import '../styles/index.scss';
             if (scroll_top > 120) {
               navbar.addClass('scrolled');
               navLink.addClass('scrolled-text-color'); 
-
-            } else {
-              navbar.removeClass('scrolled');
-              navLink.removeClass('scrolled-text-color'); 
-            }
+            }else {
+                navbar.removeClass('scrolled');
+                navLink.removeClass('scrolled-text-color'); 
+              }
           })
 
-    
+        //accordion
+        $('.collapse').on('hidden.bs.collapse', function () {
+            $(this).parent().find('.accordion_arrow').addClass('rotate');
+        });
+
+        $('.collapse').on('shown.bs.collapse', function () {
+            let imageClass = $(this).attr('data-image');
+            let image = $(imageClass);
+            let images = $('.accordion_image');
+            images.addClass('hidden');
+            image.removeClass('hidden');
+
+            $(this).parent().find('.accordion_arrow').removeClass('rotate');
+
+        });
 
     });
 

@@ -1,4 +1,117 @@
-#app-component-1{
-    padding: 90px 0;
+#app-component-2 {
+    .content_images {
+        padding-top: 50px;
+      .accordion_image {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    .accordion{
+        padding-top: 50px;
+    }
+    .card-header a{
+      text-decoration: none;
+      outline: none;
+      color: #333333;
+    }
+    .card-header{
+        background-color: $background-gold;
+    }
+    .accordion_title {
+      color: #333333;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      outline: none;
+      font-weight: 600;
+    }
+    .accordion_arrow {
+      width: 24px;
+      float: right;
+      padding-top: 0;
+      transition: transform .2s ease-in-out;
+      &.rotate {
+        transform: rotate(180deg);
+        transform-origin: 50% 12px;
+      }
+    }
+    .card-body {
+      max-height: 200px;
+      overflow-y: scroll;
+      font-size: 1.8rem;
+      .img-content{
+        display: none;
+      }
+    }
+  }
+  
+  @media (max-width: $large){
+    #app-component-2 {
+      .content_images {
+        display: none;
+      }
+      .card-body {
+        .img-content{
+          display: flex;
+          justify-content: center;
+          padding-top: 20px;
+          img{
+            width: 50%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $medium){
+    #app-component-2 {
+        .content_images {
+          display: none;
+        }
+        .card-body {
+            font-size: 1.60rem;
+          .img-content{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            img{
+              width: 50%;
+              height: auto;
+            }
+          }
+        }
+      }
+  }
+  @media (max-width: $small) {
+    #app-component-2 {
+        .content_images {
+          display: none;
+        }
+        .card-body {
+            font-size: 1.50rem;
+          .img-content{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            img{
+              width: 50%;
+              height: auto;
+            }
+          }
+        }
+      }
+  }
+
+  @media (max-width: $extraSmall){
+    #app-component-2 {
+      display: none;
       
-}
+    }
+  }
+  
+  
