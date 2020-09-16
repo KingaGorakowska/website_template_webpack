@@ -132,8 +132,10 @@ import '../styles/index.scss';
             });
         });
 
-
-
+        let navbarActive = $('#top-head .navbar');
+        $(".hamburger").click(function() { 
+            navbarActive.addClass('navbar-mobile');
+        }); 
 
         // animation nav 
 
